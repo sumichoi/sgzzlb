@@ -4,12 +4,176 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>샘플</title>
-    <link rel="stylesheet" href="style.css"/>
-    <script src="main.js"></script>
+   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+   <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-<main class="main centering large">
-    <h1>콘솔을 확인해 주세요.</h1>
-</main>
+<body class="text-center">
+  <div class="container-fluid">
+    <div class="row justify-content-center px-2 pt-3">
+      <div class="col-sm-10 col-md-8 col-xs-12 col-lg-6 col-xl-4 bg-test pb-3">
+        <div class="row mt-4 mb-3">
+          <div class="col">
+            <h2>E7 강화 계산기 <small>1.1v</small></h2>
+            <hr/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <table class="table-responsive">
+              <thead>
+                <tr>
+                  <th scope="col" style="min-width: 100px">옵션</th>
+                  <th scope="col" style="min-width:80px; width: 60px">수치</th>
+                  <th scope="col" style="min-width: 40px">최대</th>
+                  <th scope="col" style="min-width: 100px">점수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="opt_sub form-group">
+                  <td>
+                    <select class="opt_name form-control">
+                      <option>-----</option>
+                      <option value="atkp">공격력%</option>
+                      <option value="defp">방어력%</option>
+                      <option value="hpp">생명력%</option>
+                      <option value="eff">효적% </option>
+                      <option value="res">효저% </option>
+                      <option value="chc">치확% </option>
+                      <option value="chd">치피% </option>
+                      <option value="spd">속도 </option>
+                    </select>
+                  </td>
+                  <td><input class="opt_val form-control" type="number" /></td>
+                  <td><span class="opt_max">0</span></td>
+                  <td>
+                    <div class="score_badge" class="badge badge-primary text-wrap"></div>
+                    <span class="opt_score">0</span>
+                  </td>
+                </tr>
+                <tr class="opt_sub form-group">
+                  <td>
+                    <select class="opt_name form-control">
+                      <option>-----</option>
+                      <option value="atkp">공격력%</option>
+                      <option value="defp">방어력%</option>
+                      <option value="hpp">생명력%</option>
+                      <option value="eff">효적% </option>
+                      <option value="res">효저% </option>
+                      <option value="chc">치확% </option>
+                      <option value="chd">치피% </option>
+                      <option value="spd">속도 </option>
+                    </select>
+                  </td>
+                  <td><input class="opt_val form-control" type="number" /></td>
+                  <td><span class="opt_max">0</span></td>
+                  <td>
+                    <div class="score_badge" class="badge badge-primary text-wrap"></div>
+                    <span class="opt_score">0</span>
+                  </td>
+                </tr>
+
+                <tr class="opt_sub form-group">
+                  <td>
+                    <select class="opt_name form-control">
+                      <option>-----</option>
+                      <option value="atkp">공격력%</option>
+                      <option value="defp">방어력%</option>
+                      <option value="hpp">생명력%</option>
+                      <option value="eff">효적% </option>
+                      <option value="res">효저% </option>
+                      <option value="chc">치확% </option>
+                      <option value="chd">치피% </option>
+                      <option value="spd">속도 </option>
+                    </select>
+                  </td>
+                  <td><input class="opt_val form-control" type="number" /></td>
+                  <td><span class="opt_max">0</span></td>
+                  <td>
+                    <div class="score_badge" class="badge badge-primary text-wrap"></div>
+                    <span class="opt_score">0</span>
+                  </td>
+                </tr>
+
+                <tr class="opt_sub form-group">
+                  <td>
+                    <select class="opt_name form-control">
+                      <option>-----</option>
+                      <option value="atkp">공격력%</option>
+                      <option value="defp">방어력%</option>
+                      <option value="hpp">생명력%</option>
+                      <option value="eff">효적% </option>
+                      <option value="res">효저% </option>
+                      <option value="chc">치확% </option>
+                      <option value="chd">치피% </option>
+                      <option value="spd">속도 </option>
+                    </select>
+                  </td>
+                  <td><input class="opt_val form-control" type="number" /></td>
+                  <td><span class="opt_max">0</span></td>
+                  <td>
+                    <div class="score_badge" class="badge badge-primary text-wrap"></div>
+                    <span class="opt_score">0</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="row mt-2" style="padding:7px">
+          <div class="col-md-6 col-xs-6 mt-1">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="enhance">강화</label>
+              </div>
+              <select class="custom-select" id="enhance">
+                <option value="15">+15</option>
+                <option value="12">+12</option>
+                <option value="9">+9</option>
+                <option value="6">+6</option>
+                <option value="3">+3</option>
+                <option value="0">+0</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-6 mt-1">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="isT7"> 재련 ? </label>
+              </div>
+              <label class="form-control" for="isT7">
+                <input type="checkbox" name="isT7" id="isT7">
+              </label>
+            </div>
+          </div>
+          <div class="col-12 mt-1">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">총점</span>
+              </div>
+              <span type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                <div id="score_badge" class="badge badge-primary text-wrap"></div>
+                <span class="score_per">0</span>
+                <!-- (<span class="score">0</span>/<span class="score_max">0</span>) -->
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-10">
+            <button id="calc" class="btn btn-info w-100 my-3">
+              계산
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="./script.js"></script>
+
 </body>
 </html>
