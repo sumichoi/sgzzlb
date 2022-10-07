@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en" >
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>샘플</title>
-   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
-   <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=220, initial-scale=1">
+  <title>E7/itemscore</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
+
 </head>
+<!-- partial:index.partial.html -->
 <body class="text-center">
   <div class="container-fluid">
     <div class="row justify-content-center px-2 pt-3">
       <div class="col-sm-10 col-md-8 col-xs-12 col-lg-6 col-xl-4 bg-test pb-3">
         <div class="row mt-4 mb-3">
           <div class="col">
-            <h2>E7 강화 계산기 <small>1.1v</small></h2>
+            <h2>인턴이 시키는 계산기<small>1.0v</small></h2>
             <hr/>
           </div>
         </div>
@@ -21,99 +23,15 @@
           <div class="col">
             <table class="table-responsive">
               <thead>
-                <tr>
-                  <th scope="col" style="min-width: 100px">옵션</th>
-                  <th scope="col" style="min-width:80px; width: 60px">수치</th>
-                  <th scope="col" style="min-width: 40px">최대</th>
-                  <th scope="col" style="min-width: 100px">점수</th>
-                </tr>
+              <tr>
+                <th scope="col" style="min-width:80px; width: 60px">시간</th>
+                <th scope="col" style="min-width:100px; width: 100px">칸수</th>
+              </tr>
               </thead>
               <tbody>
                 <tr class="opt_sub form-group">
-                  <td>
-                    <select class="opt_name form-control">
-                      <option>-----</option>
-                      <option value="atkp">공격력%</option>
-                      <option value="defp">방어력%</option>
-                      <option value="hpp">생명력%</option>
-                      <option value="eff">효적% </option>
-                      <option value="res">효저% </option>
-                      <option value="chc">치확% </option>
-                      <option value="chd">치피% </option>
-                      <option value="spd">속도 </option>
-                    </select>
-                  </td>
-                  <td><input class="opt_val form-control" type="number" /></td>
-                  <td><span class="opt_max">0</span></td>
-                  <td>
-                    <div class="score_badge" class="badge badge-primary text-wrap"></div>
-                    <span class="opt_score">0</span>
-                  </td>
-                </tr>
-                <tr class="opt_sub form-group">
-                  <td>
-                    <select class="opt_name form-control">
-                      <option>-----</option>
-                      <option value="atkp">공격력%</option>
-                      <option value="defp">방어력%</option>
-                      <option value="hpp">생명력%</option>
-                      <option value="eff">효적% </option>
-                      <option value="res">효저% </option>
-                      <option value="chc">치확% </option>
-                      <option value="chd">치피% </option>
-                      <option value="spd">속도 </option>
-                    </select>
-                  </td>
-                  <td><input class="opt_val form-control" type="number" /></td>
-                  <td><span class="opt_max">0</span></td>
-                  <td>
-                    <div class="score_badge" class="badge badge-primary text-wrap"></div>
-                    <span class="opt_score">0</span>
-                  </td>
-                </tr>
-
-                <tr class="opt_sub form-group">
-                  <td>
-                    <select class="opt_name form-control">
-                      <option>-----</option>
-                      <option value="atkp">공격력%</option>
-                      <option value="defp">방어력%</option>
-                      <option value="hpp">생명력%</option>
-                      <option value="eff">효적% </option>
-                      <option value="res">효저% </option>
-                      <option value="chc">치확% </option>
-                      <option value="chd">치피% </option>
-                      <option value="spd">속도 </option>
-                    </select>
-                  </td>
-                  <td><input class="opt_val form-control" type="number" /></td>
-                  <td><span class="opt_max">0</span></td>
-                  <td>
-                    <div class="score_badge" class="badge badge-primary text-wrap"></div>
-                    <span class="opt_score">0</span>
-                  </td>
-                </tr>
-
-                <tr class="opt_sub form-group">
-                  <td>
-                    <select class="opt_name form-control">
-                      <option>-----</option>
-                      <option value="atkp">공격력%</option>
-                      <option value="defp">방어력%</option>
-                      <option value="hpp">생명력%</option>
-                      <option value="eff">효적% </option>
-                      <option value="res">효저% </option>
-                      <option value="chc">치확% </option>
-                      <option value="chd">치피% </option>
-                      <option value="spd">속도 </option>
-                    </select>
-                  </td>
-                  <td><input class="opt_val form-control" type="number" /></td>
-                  <td><span class="opt_max">0</span></td>
-                  <td>
-                    <div class="score_badge" class="badge badge-primary text-wrap"></div>
-                    <span class="opt_score">0</span>
-                  </td>
+                  <td><input class="opt_val form-control" type="datetime-local" id="inputTime"  min="2022-10-07T22:22" max="2022-12-31T21:25"/></td>
+                  <td><input class="opt_val form-control" type="number" min="1" value="1"/></td>
                 </tr>
               </tbody>
             </table>
@@ -124,41 +42,32 @@
           <div class="col-md-6 col-xs-6 mt-1">
             <div class="input-group">
               <div class="input-group-prepend">
-                <label class="input-group-text" for="enhance">강화</label>
+                <label class="input-group-text" for="enhance">1칸당 추가 시간</label>
               </div>
               <select class="custom-select" id="enhance">
-                <option value="15">+15</option>
-                <option value="12">+12</option>
-                <option value="9">+9</option>
-                <option value="6">+6</option>
-                <option value="3">+3</option>
-                <option value="0">+0</option>
+                <option value="15">+30초</option>
+                <option value="12">+15초</option>
+                <option value="9">+9초</option>
+                <option value="6">+6초</option>
+                <option value="3">+3초</option>
+                <option value="0" selected>+0초</option>
               </select>
             </div>
           </div>
-          <div class="col-md-6 col-xs-6 mt-1">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <label class="input-group-text" for="isT7"> 재련 ? </label>
-              </div>
-              <label class="form-control" for="isT7">
-                <input type="checkbox" name="isT7" id="isT7">
-              </label>
+
+        <div class="col-12 mt-1">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-sm">도착</span>
             </div>
-          </div>
-          <div class="col-12 mt-1">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-sm">총점</span>
-              </div>
-              <span type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <span type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                 <div id="score_badge" class="badge badge-primary text-wrap"></div>
                 <span class="score_per">0</span>
-                <!-- (<span class="score">0</span>/<span class="score_max">0</span>) -->
+              <!-- (<span class="score">0</span>/<span class="score_max">0</span>) -->
               </span>
-            </div>
-
           </div>
+        </div>
+
         </div>
 
         <div class="row justify-content-center">
@@ -174,6 +83,7 @@
   </div>
   <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="./script.js"></script>
+  <script>document.getElementById('inputTime').value = new Date().toISOString().slice(0, 16);</script>
 
 </body>
 </html>
